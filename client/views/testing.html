@@ -1,0 +1,58 @@
+<div class="main_auto">
+<div class="autocompleteDiv input-field col s12">
+ 
+</div>
+
+  <div class=" input-field col s12 m6" ng-controller="AddAutocompleteCntrl as up">
+
+
+<h5>Autocomplete for the simple template selection </h5>
+    <material-autocomplete 
+        ac-autocomplete-id="SimpleId"
+        ac-is-required ="Enter text"
+        ac-input-name="Products"
+        ac-selected-item="test.dataResultprod"
+        ac-display-property="name"
+        ac-selected-item-change="test.fetchProductList(test.productList)"
+        ac-search-text="test.searchTextProduct"
+        ac-remote-method="test.fetchDataFromServer(test.searchTextProduct)"
+        ac-place-holder=" &#128269; &nbsp; &nbsp; Search the items here...."
+        ac-min-length="1"
+        ac-template-style="simpleTemplate">
+      </material-autocomplete>
+<br><br>
+<h5>Autocomplete for the profile template selection </h5>
+      <material-autocomplete
+      ac-autocomplete-id="profileId"
+      ac-is-required ="Enter text"
+      ac-input-name="people"
+      ac-items="test.people"
+      ac-display-property="name"
+      ac-display-email="email"
+      ac-display-picture="picture"
+      ac-search-text="test.searchPeople"
+      ac-min-length="0"
+      ac-selected-item-change="test.fetchPeopleList(test.profileList)"
+      ac-place-holder=" &#128269; &nbsp; &nbsp; Profile Autocomplete "
+      ac-template-style="profileTemplate">
+      </material-autocomplete>
+<br><br>
+<h5>Autocomplete for the color template selection </h5>
+       <material-autocomplete
+      ac-autocomplete-id="colorId"
+      ac-is-required ="Enter text"
+      ac-input-name="color"
+      ac-items="test.color"
+      ac-display-property="name"
+      ac-display-color="color"
+      ac-selected-item-change="test.fetchColorlist(test.colorLis)"
+      ac-search-text="test.searchCol"
+      ac-min-length="1"
+      ac-place-holder=" &#128269; &nbsp; &nbsp; Color Autocomplete "
+      ac-template-style="colorTemplate">
+      </material-autocomplete>
+
+    
+  </div>
+</div>
+ 
